@@ -1,0 +1,56 @@
+apps:
+  legacy:
+    user: nilelogistics
+    port: 2560
+    hostname: sv21.aarboard.ch
+    root: ~
+  legacy.test:
+    user: shopnilech
+    port: 2560
+    hostname: sv22.aarboard.ch
+    root: /home/nile/logistics
+  bliss:
+    user: bliss
+    port: 2560
+    hostname: sv11.aarboard.ch
+    root: /home/nile/bliss/htdocs/bliss/current
+  bliss.test:
+    user: bliss
+    port: 2560
+    hostname: sv96.aarboard.ch
+    root: /home/nile/bliss/htdocs/bliss/current
+  blizzard:
+    user: blizzard
+    port: 2560
+    hostname: sv10.aarboard.ch
+    root: /home/nile/blizzard/htdocs/blizzard/current
+  blizzard.test:
+    user: blizzard
+    port: 2560
+    hostname: sv93.aarboard.ch
+    root: /home/nile/blizzard/htdocs/blizzard/current
+  ws3:
+    user: shopnilech
+    port: 2560
+    hostname: www.nile.ch
+    root: /home/nile/webshop/htdocs/webshop_app/current
+  ws3.test:
+    user: shopnilech
+    port: 2560
+    hostname: sv82.aarboard.ch
+    root: /home/nile/webshop/htdocs/webshop_app/current
+  ws4:
+    user: ww6nile
+    port: 2560
+    hostname: sv50.aarboard.ch
+    root: /home/nile/ww6nile/htdocs/webshop4/current
+  ws4.test:
+    user: webshop4
+    port: 2560
+    hostname: sv52.aarboard.ch
+    root: /home/nile/webshop4/htdocs/webshop4/current
+  hook:
+    user: captain_hook
+    port: 2560
+    hostname: sv86.aarboard.ch
+    root: ~

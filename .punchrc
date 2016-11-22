@@ -1,0 +1,124 @@
+# Punch settings file. Use valid Ruby syntax or you shall be punished!
+#
+# To reset all settings run
+#
+#   $ punch --config-reset
+#
+# To update this file while keeping your modifications and adding
+# new options that might have been made available with an update run
+#
+#   $ punch --config-update
+#
+# If you messed up so badly that punch won't even start up because of
+# this config file and you don't know how to fix it, feel free to
+# delete it and generate a new one with
+#
+#   $ punch --config
+#
+Punch.configure do |config|
+  # Where to look for the BRF files.
+  config.hours_folder = "/Users/simon/Dropbox/hours"
+
+  # Your full name.
+  config.name = "Simon Kiener"
+
+  # Title that appears in the BRF file.
+  config.title = "Fadendaten GmbH"
+
+  # Arguments to pass by default. e.g. '-y' to always punch yesterday.
+  config.default_args = ""
+
+  # How much you earn per hour.
+  config.hourly_pay = 38
+
+  # Which terminal application to use to edit files.
+  config.text_editor = "vim"
+
+  # After which day punch should generate the next month's BRF file.
+  config.hand_in_date = nil
+
+  # How many hours you want to work per month.
+  config.monthly_goal = 170
+
+  # Whether to color certain output.
+  config.colors_enabled = true
+
+  # Which color to use for highlighting important text.
+  config.highlight_color_code = 35
+
+  # Which color to use for highlighting the current date.
+  config.today_color_code = 34
+
+  # Whether to add padding to group by week in the interactive editor.
+  config.group_weeks_in_interactive_mode = true
+
+  # Rounding strategy applied when substituting "now"
+  config.punch_now_rounder = :fair
+
+  # What precision (minutes) to round to.
+  config.punch_now_minute_precision = 5
+
+  # Whether to automatically regenerate ~/.punchrc with punch --update.
+  config.regenerate_punchrc_after_udpate = true
+
+  # Clear terminal buffer before printing month.
+  config.clear_buffer_before_punch = true
+
+  # Print stack trace instead of user friendly hint.
+  config.debug = true
+
+  # Which ruby command to use to execute subcommands.
+  config.system_ruby = "/Users/simon/.rbenv/versions/2.2.3/bin/ruby"
+
+  # BRFMailer configurations.
+  config.mailer_config = {
+    :smtp_domain => "aarboard.ch",
+    :smtp_server => "smtp.aarboard.ch",
+    :smtp_port => 465,
+    :smtp_user => "",
+    :smtp_pw => "",
+    :receiver => "",
+    :bcc => "",
+    :body => "",
+  }
+
+  # Register different punch cards.
+  config.cards = {
+    :end_of_month => {
+      :hours_folder => "Users/simon/Desktop/",
+      :title => "Workout",
+      :hand_in_date => :end
+    },
+    :sick => {
+      :default_args => "--tag KRANK 9-12 12:30-18",
+    },
+    :nile => {
+      :hours_folder => "~/Dropbox/Fadendaten/Hours/support/nile",
+      :title => "Nile Support",
+      :name => "Fadendaten GmbH",
+      :monthly_goal => 10,
+    },
+    :bijou => {
+      :hours_folder => "~/Dropbox/Fadendaten/Hours/support/bijou",
+      :title => "Bijou Support",
+      :name => "Fadendaten GmbH",
+      :monthly_goal => 10,
+    },
+    :pluvina => {
+      :hours_folder => "~/Dropbox/Fadendaten/Hours/support/pluvina",
+      :title => "Pluvina Support",
+      :name => "Fadendaten GmbH",
+      :monthly_goal => 10,
+    },
+    :brigitte => {
+      :hours_folder => "~/Desktop",
+      :title => "Januar",
+      :name => "Fadendaten GmbH",
+      :monthly_goal => 10,
+      :hand_in_date => 25,
+    },
+  }
+
+  # Which card to load by default. Set this to nil to load no card.
+  config.active_card = nil
+end

@@ -1,0 +1,17 @@
+[user]
+	name = Simon Kiener
+	email = jugglinghobo@gmail.com
+[push]
+	default = current
+[color]
+	ui = true
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+  purge = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
+[core]
+	excludesfile = /Users/simon/.gitignore
+[merge]
+	tool = opendiff

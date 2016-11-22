@@ -1,0 +1,42 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export PS1='\[\033[01;31m\]Glaus:\w$(__git_ps1 " (%s)") $\[\033[00m\] '
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export HOMEBREW_GITHUB_API_TOKEN=dae623c74ecf6414093d7c07b4c8803e01e476b7
+export EDITOR=vim
+
+# Set CLICOLOR if you want Ansi Colors in iTerm2
+export CLICOLOR=1
+
+# Set colors to match iTerm2 Terminal Colors
+export TERM=xterm-256color
+
+# Rails secret stuff
+export SECRET_KEY_BASE=eb1a3204399cac9596a2b2eb52271611ad1b58d647e76316614d6d6e3fd59f0e0268169fbaed56cc794e47c7671e0b180148187f200a2a7faf203abe564c1da3
+
+# Webshop4 stuff
+export POINTPIN_API_KEY=0a69a149-e9cc-4132-8a1d-a9e74d2a020b
+
+# Bliss Client Auth
+# export BLISS_SERVER=http://localhost:3000
+# export BLISS_CLIENT_ID=8dc95fb5e0ef94a67ffdbfa122c45603778be123122c0added0c1034c81c7cc5
+# export BLISS_CLIENT_SECRET=cab3ad6c7853dffc98bc57f7b963c8f9c68181e9c415fd9f117bc1152ad62bd1
+
+# Bliss AWS Access
+export AWS_REGION=eu-west-1
+export AWS_ACCESS_KEY_ID=AKIAJ5WQO2CVCWFA4WDA
+export AWS_SECRET_ACCESS_KEY=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
+
+# Velo
+export POSTGRESQL_DATABASE=velo
+export POSTGRESQL_USER=simon
+export POSTGRESQL_PASSWORD=danidani
+export POSTGRESQL_HOST=
+
+export TRACKER_USERNAME=admin@dreiradfahrer.ch
+export TRACKER_PASSWORD=auamiarsch
+
+export RESTCLIENT_LOG=log/restclient.log
+
+source ~/Projects/punch/punch-completion.bash
